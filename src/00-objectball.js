@@ -51,3 +51,51 @@ function numPointsScored(name) {
     }
 }
 
+function shoeSize(Name) {
+    let objec = gameObject()
+    let objKey = Object.keys(objec)
+    for(let n of objKey) {
+        let player = Object.keys(objec[n]["players"])
+        for(let s of player) {
+            if (s === Name) {
+                return objec[n] ["players"] [s] ["shoe"] 
+            }
+        }
+    }
+}
+
+function teamColors(name) {
+    let object = gameObject()
+    let objKey = Object.keys(object)
+    for(let n of objKey) {
+        let color = Object.keys(object[n]["colors"] )
+        if (n === name) {
+            return object[n] ["colors"]
+        }
+    }
+}
+
+function teamNames() {
+    let object = gameObject()
+    let objecKey = Object.keys(object)
+    return objecKey
+}
+
+// Build a function, playerNumbers, that takes in an 
+//argument of a team name and returns an array of the jersey number's for that team 
+function playerNumbers(teamName) {
+    let object = gameObject()
+    let objectKey = Object.keys(object)
+    for (let n of objectKey) {
+        let players = Object.keys(object[n]["players"])
+        for (let k of players) {
+            if (objectKey === teamName) {
+                return object[n] ["players"] [k] ["number"]
+            }
+           
+            
+        }
+    }
+}        
+
+
